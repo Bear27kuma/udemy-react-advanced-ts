@@ -81,3 +81,17 @@ const onClickPractice = () => {
   console.log(total);
 };
 ```
+
+## tsconfigで設定する
+`compilerOptions`の`strict`を`true`にすると、型定義が厳しくチェックされるようになる
+
+厳密には以下の型チェックのパラメーターが有効になる
+
+- `alwaysStrict`
+- `noImplicitAny`
+- `noImplicitThis`
+- `strictBindCallApply`
+- `strictFunctionTypes`
+- `strictNullChecks`
+- `strictPropertyInitialization`
+- `useUnknownInCatchVariables`
