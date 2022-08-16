@@ -1,14 +1,3 @@
-# React × TypeScript
-## TypeScriptとは
-- Microsoftが開発したオープンソースの言語
-- JavaScriptに「型」という概念
-- より安全にバグが少なく開発ができる
-- 開発者間で認識を合わせやすい
-- エディタでコード補完も効くので開発効率がUP
-- コンポーネント指向のReactと非常に相性が良い
-
-## TypeScriptの基本の型
-```ts
 /** TypeScriptの基本の型 */
 
 // boolean 真偽値
@@ -45,4 +34,3 @@ let undefined1: undefined = undefined;
 // object
 let obj1: object = {};
 let obj2: { id: number, name: string } = { id: 0, name: 'AAA' };
-```
