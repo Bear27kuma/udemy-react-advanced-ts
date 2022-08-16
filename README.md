@@ -72,3 +72,12 @@ const getTotalFee = (num: number): number => {
   return num * 1.1;
 };
 ```
+
+## 変数の型定義
+```ts
+const onClickPractice = () => {
+  let total: number = 0;
+  total = getTotalFee(1000);
+  console.log(total);
+};
+```
