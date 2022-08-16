@@ -65,3 +65,10 @@ const calcTotalFee = (num: number) => {
 // number型でないとエラーになる
 const onClickPractice = () => calcTotalFee(1000);
 ```
+
+## 返却値の型指定
+```ts
+const getTotalFee = (num: number): number => {
+  return num * 1.1;
+};
+```
