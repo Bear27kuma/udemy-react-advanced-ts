@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 import axios from 'axios';
 import { Todo } from './Todo';
 
@@ -24,7 +23,7 @@ function App() {
     <div className="App">
       <button onClick={onClickFetchData}>データ取得</button>
       {todoList.map((todo) => (
-        <Todo title={todo.title} userId={todo.userId} />
+        <Todo title={todo.title} userId={todo.userId} completed={todo.completed} />
       ))}
     </div>
   );
