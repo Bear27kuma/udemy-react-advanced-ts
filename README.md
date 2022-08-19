@@ -95,3 +95,11 @@ const onClickPractice = () => {
 - `strictNullChecks`
 - `strictPropertyInitialization`
 - `useUnknownInCatchVariables`
+
+## 型定義の効率化
+ある型定義が共通になっており、一部のプロパティだけを使用（`Pick`）したり、省いたり（`Omit`）して型定義を行うことができる
+
+```
+Pick<型定義変数名、'使用したいプロパティ1' | '使用したいプロパティ2'>
+Omit<型定義変数名、'省きたいプロパティ'>
+```
