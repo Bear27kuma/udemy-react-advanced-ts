@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Todo } from './Todo';
 import { TodoType } from './types/todo';
+import { Text } from './Text';
 
 function App() {
   // 型を指定する
@@ -14,6 +15,7 @@ function App() {
   };
   return (
     <div className="App">
+      <Text color="red" fontSize="18px" />
       <button onClick={onClickFetchData}>データ取得</button>
       {todoList.map((todo) => (
         <Todo key={todo.id} title={todo.title} userId={todo.userId} completed={todo.completed} />
