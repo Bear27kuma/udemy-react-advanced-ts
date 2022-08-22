@@ -3,6 +3,13 @@ import axios from 'axios';
 import { Todo } from './Todo';
 import { TodoType } from './types/todo';
 import { Text } from './Text';
+import { UserProfile } from './UserProfile';
+import { User } from './types/user';
+
+const user: User = {
+  name: 'Yuta',
+  // hobbies: ['映画', 'ゲーム']
+};
 
 function App() {
   // 型を指定する
@@ -15,6 +22,7 @@ function App() {
   };
   return (
     <div className="App">
+      <UserProfile user={user} />
       <Text color="red" fontSize="18px" />
       <button onClick={onClickFetchData}>データ取得</button>
       {todoList.map((todo) => (
