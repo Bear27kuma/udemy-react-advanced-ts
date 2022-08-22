@@ -95,3 +95,26 @@ const onClickPractice = () => {
 - `strictNullChecks`
 - `strictPropertyInitialization`
 - `useUnknownInCatchVariables`
+
+## 型定義の効率化
+ある型定義が共通になっており、一部のプロパティだけを使用（`Pick`）したり、省いたり（`Omit`）して型定義を行うことができる
+
+```
+Pick<型定義変数名、'使用したいプロパティ1' | '使用したいプロパティ2'>
+Omit<型定義変数名、'省きたいプロパティ'>
+```
+
+## コンポーネント自体の型定義
+Reactには`FC（Functional Component）`という型が存在し、これをコンポーネントの型として指定することができる
+
+```tsx
+// FC<Props>の記述形式
+export const Text: FC<Props> = (props) => {
+  const { color, fontSize } = props;
+  return <p style={{ color, fontSize }}>テキストです</p>
+};
+```
+
+また、`FC`はデフォルトで`children`を受け取るようになっている
+
+v17までは`VFC`を使うと`children`を受け取らないようになっているが、v18からは`FC`でも`children`が除外される
